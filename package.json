@@ -1,0 +1,35 @@
+{
+  "name": "joke-me-daddy",
+  "version": "1.0.0",
+  "description": "A Dad Joke Randomiser",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll --coverage",
+    "start": "node index",
+    "dev": "nodemon index --ignore data.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roa-2020/joke-me-daddy.git"
+  },
+  "keywords": [
+    "Dad",
+    "Jokes"
+  ],
+  "author": "anthony-kyle, camshaw11, steven-delacy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roa-2020/joke-me-daddy/issues"
+  },
+  "homepage": "https://github.com/roa-2020/joke-me-daddy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "jest": "^26.4.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}

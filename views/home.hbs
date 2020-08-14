@@ -5,12 +5,24 @@
 *            Cameron Shaw    (camshaw11)
 *            Steven De Lacy  (steven-delacy)
 ******************************************* --}}
+<div class="container text-center">
 
-<h1 class="display-4">Home Body</h1>
-<div class="jokes">
-  <h2 id="setup">Setup</h2>
-  <h2 id="punchline">Punchline</h2>
+    <div class="jokes mb-5">
+      <h1 id="setup">{{setup}}</h2>
+      <h1 id="punchline">{{punchline}}</h2>
+    </div>
+
+    <form method="GET" action="/">
+      <div class="form-group">
+        <label for="remix">
+        <label class="switch">
+          <input type="checkbox" name="remix" id="remix"{{#if remix}} checked{{/if}}>
+          <span class="slider round"></span>
+        </label>
+        Remix The Jokes?
+      </label>
+      </div>
+      <button type="submit" class="btn btn-dark">New Joke</button>
+    </form>
+
 </div>
-<form>
-  <button>New Joke</button>
-</form>

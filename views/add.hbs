@@ -1,0 +1,24 @@
+{{!-- ******************************************
+* File:      add.hbs
+* Purpose:   Form to Add New Joke
+* Authors:   Anthony McGrath (anthony-kyle)
+*            Cameron Shaw    (camshaw11)
+*            Steven De Lacy  (steven-delacy)
+******************************************* --}}
+<div class="container text-center">
+  
+  <h2>Add A Joke</h2>
+  <p>Feel free to add a joke to our database, so you can rest in the annals of comedic history.</p>
+  <p>Enter the question into setup. eg: Why'd the chicken cross the road?</p>
+  <p>Enter the punchline into punchline</p>
+    <form method="GET" action="/">
+      <div class="form-group">
+        <input class="form-control" type="text" name="setup" placeholder="setup">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="punchline" placeholder="punchline">
+      </div>
+      <button type="submit" class="btn">New Joke</button>
+    </form>
+
+</div>

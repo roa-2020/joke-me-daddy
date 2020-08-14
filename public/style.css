@@ -81,46 +81,16 @@ header img {
   z-index: 0;
 }
 
-@media screen and (max-width: 1024px){
-  header {
-    min-height: 20%;
-  }
 
-  .display-4 {
-    font-size: 4rem;
-    font-weight: 400;
-    line-height: 1.0;
-  }
-  
-  header img {
-    position: absolute;
-    bottom: 0;
-    right: 5%;
-    width: auto; 
-    height: 60%;
-    z-index: 0;
-  }
-}
-
-@media (max-width: 650px) {
-  .display-4 {
-      font-size: 3rem;
-      font-weight: 300;
-      line-height: 1.0;
-      width: 80%;
-  }
-}
-
-@media (max-width: 400px) {
-  header img {
-    display: none;
-  }
-}
 /**************************************************
  * Nav Styles
  **************************************************/
 nav, .btn {
   background-color: rgb(14, 191, 149);
+}
+
+.navbar-toggler:focus {
+  outline: none;
 }
 
 /**************************************************
@@ -207,4 +177,55 @@ footer a {
 footer p {
   padding: 0px;
   margin: 0px;
+}
+
+
+/**************************************************
+ * Responsive Styling
+ **************************************************/
+@media screen and (max-width: 1024px){
+  header {
+    min-height: 20%;
+  }
+
+  .display-4 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.0;
+  }
+  
+  header img {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: auto; 
+    height: 60%;
+    z-index: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  h1 {
+    font-size: 1.6rem
+  }
+
+  
+
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .display-4 {
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1.0;
+      width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header img {
+    display: none;
+  }
 }

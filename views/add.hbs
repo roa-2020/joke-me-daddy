@@ -6,12 +6,22 @@
 *            Steven De Lacy  (steven-delacy)
 ******************************************* --}}
 <div class="container text-center">
-  
-  <h2>Add A Joke</h2>
-  <p>Feel free to add a joke to our database, so you can rest in the annals of comedic history.</p>
-  <p>Enter the question into setup.<br><em>eg: Why'd the chicken cross the road?</em></p>
-  <p>Enter the punchline into punchline.<br><em>eg: To get to the other side.</em></p>
-    <form method="GET" action="/">
+  {{#if save}}
+    {{#ifEquals save 'success'}}
+      <h2>Joke Saved Successfully</h2>
+      <p>Go have a look at the <a href="/">jokes</a> to see if you can find it!</p>
+    {{/ifEquals}}
+    {{#ifEquals save 'error'}}
+      <h2>Joke Not Saved</h2>
+      <p>Sorry about that, something went wrong :&lpar;. No jokes for you today.</p>
+    {{/ifEquals}}
+  {{/if}}
+  {{#unless save}}
+    <h2>Add A Joke</h2>
+    <p>Feel free to add a joke to our database, so you can rest in the annals of comedic history.</p>
+    <p>Enter the question into setup.<br><em>eg: Why'd the chicken cross the road?</em></p>
+    <p>Enter the punchline into punchline.<br><em>eg: To get to the other side.</em></p>
+    <form method="POST" action="/add">
       <div class="form-group">
         <input class="form-control" type="text" name="setup" placeholder="setup">
       </div>
@@ -20,5 +30,5 @@
       </div>
       <button type="submit" class="btn">New Joke</button>
     </form>
-
+  {{/unless}}
 </div>

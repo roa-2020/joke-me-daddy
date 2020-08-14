@@ -1,5 +1,5 @@
 {
-  "jokes": [
+  "jokes" : [
     {
       "setup": "Dad, did you get a haircut?",
       "punchline": "No, I got them all cut!"
@@ -102,12 +102,12 @@
     },
     {
       "setup": "What goes in hard and dry then comes out wet and soft?",
-      "punchline": "Chewing gum"
+      "punchline": "Chewing gum"   
     },
     {
       "setup": "Have you heard of the band 1023MB?",
       "punchline": "They're quite good, but they haven't got a Gig yet."
-    },
+    },    
     {
       "setup": "The invention of the broom really ..",
       "punchline": "swept the nation"
@@ -139,10 +139,6 @@
     {
       "setup": "My wife asked me to stop singing “Wonderwall” to her.",
       "punchline": "I said maybe "
-    },
-    {
-      "setup": "What part of the Orchestra can't you trust?",
-      "punchline": "The fiddlers."
     }
   ]
 }

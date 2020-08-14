@@ -26,19 +26,20 @@ function getSingleJoke(remix, next) {
 		})
 }
 
-function addNewJoke() {
-  getAllJokes((obj)=>{
-    console.log(obj.jokes)
-    // fs.writeFileSync('./data.json', JSON.stringify([{}]) , 'utf-8') {
-    // const jokes = []  
-    // const map = jokes.jokes.map(???)
-    // }
-    //idk if this is on the right track?
+function addNewJoke(joke, next, file = './data.json') {
+  getAllJokes((obj) => {
+		obj.jokes.push(joke)
+		let saveJoke = JSON.stringify(obj, null, 2)
 
+    fs.writeFile(file, saveJoke , err => {
+			if (err) {
+				next('error')
+				throw err
+			} 
+			next('success')
+    })
   })
 }
-
-console.log(addNewJoke())
 
 module.exports = {
   getRandomIndex, getAllJokes, getSingleJoke, addNewJoke

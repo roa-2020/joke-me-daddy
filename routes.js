@@ -34,12 +34,26 @@ router.get('/', (req, res) => {
 });
 
 router.get('/add', (req,res) => {
+  const save = req.query.save || false;
   const viewData = {
     title: "Add Joke",
     description: "Add a joke to our database and go down in comedy history",
   }
+  if (save) {
+    viewData.save = save;
+  }
   res.render('add', viewData);
 })
+
+router.post('/add', (req,res) => {
+  const joke = {
+    setup: req.body.setup,
+    punchline: req.body.punchline
+  }
+  fn.addNewJoke(joke, (status)=>{
+    res.redirect('/add?save='+status);
+  });
+});
 
 /*************************************************
  * Export Router

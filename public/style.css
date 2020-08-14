@@ -55,13 +55,23 @@ header {
   text-align: center;
 }
 
-header h1 {
+header a {
   margin: auto;
   position: relative;
   z-index: 2;
   display: flex;
   justify-self: center;
   text-align: center;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  color: #212529;
+}
+
+header a:hover {
+  color: #212529;
+  opacity: 0.8; 
+  text-decoration: none;
 }
 
 .display-4 {
@@ -188,7 +198,7 @@ footer p {
     min-height: 20%;
   }
 
-  .display-4 {
+  header a .display-4 {
     font-size: 4rem;
     font-weight: 400;
     line-height: 1.0;
@@ -210,13 +220,11 @@ footer p {
     font-size: 1.6rem
   }
 
-  
-
   .container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .display-4 {
+  header a .display-4 {
       font-size: 3rem;
       font-weight: 300;
       line-height: 1.0;

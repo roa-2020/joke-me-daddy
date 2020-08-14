@@ -1,5 +1,19 @@
+/**************************************************
+ * File:      style.css
+ * Purpose:   Performs Styling for Site
+ * Authors:   Anthony McGrath (anthony-kyle)
+ *            Cameron Shaw    (camshaw11)
+ *            Steven De Lacy  (steven-delacy)
+ **************************************************/
+
+/**************************************************
+ * API Imports
+ **************************************************/
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
+/**************************************************
+ * Global Styles
+ **************************************************/
 body {
   margin: 0;
   padding: 0;
@@ -11,26 +25,6 @@ body {
   flex-direction: column;
   font-family: 'Ubuntu', sans-serif;
 }
-footer {
-  padding: 0.5em 0;
-  border-top: solid 1px #cdcdcd;
-  font-size: 0.7em;
-  color: #787878;
-}
-
-footer a {
-  color: #787878;
-}
-
-
-footer p {
-  padding: 0px;
-  margin: 0px;
-}
-
-nav, .btn {
-  background-color: rgb(14, 191, 149);
-}
 
 .container {
   display: flex;
@@ -41,6 +35,94 @@ nav, .btn {
   justify-content: center;
 }
 
+em {
+  opacity: 0.8;
+}
+
+
+/**************************************************
+ * Header Styles
+ **************************************************/
+header {
+  position: relative;
+  background-color: #787878;
+  min-height: 30%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  text-align: center;
+}
+
+header h1 {
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-self: center;
+  text-align: center;
+}
+
+.display-4 {
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1.0;
+  align-self:center;
+}
+
+header img {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: auto; 
+  height: 80%;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1024px){
+  header {
+    min-height: 20%;
+  }
+
+  .display-4 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.0;
+  }
+  
+  header img {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: auto; 
+    height: 60%;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .display-4 {
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1.0;
+      width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  header img {
+    display: none;
+  }
+}
+/**************************************************
+ * Nav Styles
+ **************************************************/
+nav, .btn {
+  background-color: rgb(14, 191, 149);
+}
+
+/**************************************************
+ * Checkbox Sliders
+ **************************************************/
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -55,7 +137,6 @@ nav, .btn {
   width: 0;
   height: 0;
 }
-
 
 /* The slider */
 .slider {
@@ -103,4 +184,24 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/**************************************************
+ * Footer Styling
+ **************************************************/
+footer {
+  padding: 0.5em 0;
+  border-top: solid 1px #cdcdcd;
+  font-size: 0.7em;
+  color: #787878;
+}
+
+footer a {
+  color: #787878;
+}
+
+
+footer p {
+  padding: 0px;
+  margin: 0px;
 }

@@ -1,144 +1,189 @@
 {
-  "jokes" : [
+  "jokes": [
     {
+      "id": 0,
       "setup": "Dad, did you get a haircut?",
       "punchline": "No, I got them all cut!"
     },
     {
+      "id": 1,
       "setup": "My wife is really mad at the fact that I have no sense of direction.",
       "punchline": "So I packed up my stuff and right!"
     },
     {
+      "id": 2,
       "setup": "How do you get a squirrel to like you?",
       "punchline": "Act like a nut."
     },
     {
+      "id": 3,
       "setup": "Why don't eggs tell jokes?",
       "punchline": "They'd crack each other up."
     },
     {
+      "id": 4,
       "setup": "I don't trust stairs.",
       "punchline": "They're always up to something."
     },
     {
+      "id": 5,
       "setup": "What do you call someone with no body and no nose?",
       "punchline": "Nobody knows."
     },
     {
+      "id": 6,
       "setup": "Did you hear the rumor about butter?",
       "punchline": "Well, I'm not going to spread it!"
     },
     {
+      "id": 7,
       "setup": "Why couldn't the bicycle stand up by itself?",
       "punchline": "It was two tired."
     },
     {
+      "id": 8,
       "setup": "Dad, can you put my shoes on?",
       "punchline": "No, I don't think they'll fit me."
     },
     {
+      "id": 9,
       "setup": "Why can't a nose be 12 inches long?",
       "punchline": "Because then it would be a foot."
     },
     {
+      "id": 10,
       "setup": "This graveyard looks overcrowded.",
       "punchline": "People must be dying to get in."
     },
     {
+      "id": 11,
       "setup": "Dad, can you put the cat out?",
       "punchline": "I didn't know it was on fire."
     },
     {
+      "id": 12,
       "setup": "What time did the man go to the dentist?",
       "punchline": "Tooth hurt-y."
     },
     {
+      "id": 13,
       "setup": "How many tickles does it take to make an octopus laugh?",
       "punchline": "Ten tickles."
     },
     {
+      "id": 14,
       "setup": "What concert costs just 45 cents?",
       "punchline": "50 Cent featuring Nickelback!"
     },
     {
+      "id": 15,
       "setup": "How do you make a tissue dance?",
       "punchline": "You put a little boogie in it."
     },
     {
+      "id": 16,
       "setup": "Why did the math book look so sad?",
       "punchline": "Because of all of its problems!"
     },
     {
+      "id": 17,
       "setup": "What do you call cheese that isn't yours?",
       "punchline": "Nacho cheese."
     },
     {
+      "id": 18,
       "setup": "What kind of shoes do ninjas wear?",
       "punchline": "Sneakers!"
     },
     {
+      "id": 19,
       "setup": "How does a penguin build its house?",
       "punchline": "Igloos it together."
     },
     {
+      "id": 20,
       "setup": "Today, my son asked 'Can I have a book mark?' and I burst into tears.",
       "punchline": "11 years old and he still doesn't know my name is Brian."
     },
     {
+      "id": 21,
       "setup": "What did the shoe say to the confused hat?",
       "punchline": "You go on ahead."
     },
     {
+      "id": 22,
       "setup": "What do you call a man with no arms or legs in the middle of the ocean?",
       "punchline": "Bob"
     },
     {
+      "id": 23,
       "setup": "How did you quit smoking?",
       "punchline": "I decided to smoke only after sex."
     },
     {
+      "id": 24,
       "setup": "What does a perverted frog say?",
       "punchline": "Rubbit"
     },
     {
+      "id": 25,
       "setup": "What goes in hard and dry then comes out wet and soft?",
-      "punchline": "Chewing gum"   
+      "punchline": "Chewing gum"
     },
     {
+      "id": 26,
       "setup": "Have you heard of the band 1023MB?",
       "punchline": "They're quite good, but they haven't got a Gig yet."
-    },    
+    },
     {
+      "id": 27,
       "setup": "The invention of the broom really ..",
       "punchline": "swept the nation"
     },
     {
+      "id": 28,
       "setup": "How is life like toilet paper?",
       "punchline": "You’re either on a roll or taking shit from someone."
     },
     {
+      "id": 29,
       "setup": "How do you spot a blind man on a nude beach?",
       "punchline": "It’s not hard."
     },
     {
+      "id": 30,
       "setup": "Having sex in an elevator is wrong.",
       "punchline": "On so many levels."
     },
     {
+      "id": 31,
       "setup": "Why was the weightlifter upset?",
       "punchline": "She worked with dumbbells."
     },
     {
+      "id": 32,
       "setup": "What kind of noise does a witch’s vehicle make? ",
       "punchline": "Brrrroooom, brrroooom."
     },
     {
+      "id": 33,
       "setup": "Two guys walked into a bar.",
       "punchline": "The third guy ducked."
     },
     {
+      "id": 34,
       "setup": "My wife asked me to stop singing “Wonderwall” to her.",
       "punchline": "I said maybe "
+    },
+    {
+      "id": 35,
+      "setup": "What part of the Orchestra can't you trust?",
+      "punchline": "The fiddlers."
+    },
+    {
+      "setup": "I love telling dad jokes...",
+      "punchline": "Sometimes he laughs",
+      "id": 36
     }
   ]
 }

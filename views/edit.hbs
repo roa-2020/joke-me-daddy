@@ -1,0 +1,41 @@
+{{!-- ******************************************
+* File:      edit.hbs
+* Purpose:   Form to Edit an existing joke
+* Authors:   Anthony McGrath (anthony-kyle)
+*            Cameron Shaw    (camshaw11)
+*            Steven De Lacy  (steven-delacy)
+******************************************* --}}
+<div class="container text-center">
+  {{#if save}}
+    {{#ifEquals save 'success'}}
+      <h2 class="my-4">Joke Saved Successfully</h2>
+      <p>Go have a look at the <a href="/">jokes</a> to see if you can find it!</p>
+    {{/ifEquals}}
+    {{#ifEquals save 'error'}}
+      <h2 class="my-4">Joke Not Saved</h2>
+      <p>Sorry about that, something went wrong :&lpar;. No jokes for you today.</p>
+    {{/ifEquals}}
+  {{/if}}
+  {{#unless save}}
+    <h2 class="my-4">Edit A Joke</h2>
+    <p>Update the below joke to fix any spelling/other issues</p>
+    <form method="POST" action="/edit/{{id}}">
+      <div class="form-group">
+        <input class="form-control" type="text" name="setup" value="{{setup}}">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="punchline" value="{{punchline}}">
+      </div>
+      <div class="form-group">
+        <label for="delete">
+          <label class="switch">
+            <input type="checkbox" name="delete" id="delete">
+            <span class="slider round"></span>
+          </label>
+          Delete Joke
+        </label>
+      </div>
+      <button type="submit" class="btn mb-2">Update Joke</button>
+    </form>
+  {{/unless}}
+</div>

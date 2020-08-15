@@ -20,34 +20,71 @@ function getAllJokes(next, file = './data.json') {
 	})
 }
 
-function getSingleJoke(remix, next) {
+function getJokeIndex(id, jokes){
+	return jokes.jokes.findIndex(j => j.id === Number(id));
+}
+
+function getSingleJoke(remix, next, id = false) {
 	getAllJokes((obj) => {
 		const max = obj.jokes.length;
-		let joke = obj.jokes[getRandomIndex(max)];
-		if (remix === 'on'){
-			let secondJoke = obj.jokes[getRandomIndex(max)];
-			joke.punchline = secondJoke.punchline;
+		let joke = {};
+		if (id){
+			index = getJokeIndex(id, obj);
+			joke = obj.jokes[index];
+		} else {
+			joke = obj.jokes[getRandomIndex(max)];
+			if (remix === 'on'){
+				let secondJoke = obj.jokes[getRandomIndex(max)];
+				joke.punchline = secondJoke.punchline;
+			}
 		}
+
 		next(joke); 
 	})
 }
 
-function addNewJoke(joke, next, file = './data.json') {
+function addNewJoke(joke, next, file = false) {
   getAllJokes((obj) => {
-		obj.jokes.push(joke)
-		let saveJoke = JSON.stringify(obj, null, 2)
-    fs.writeFile(file, saveJoke , err => {
-			if (err) {
-				next('error')
-				throw err
-			} 
-			next('success')
-    })
+		joke.id = obj.jokes.length;
+		obj.jokes.push(joke);
+		save(obj, next, (file ? file : undefined));
   })
 }
 
+function save(jokes, next, file = './data.json'){
+	const saveJoke = JSON.stringify(jokes, null, 2)
+	fs.writeFile(file, saveJoke , err => {
+		if (err) {
+			next('error')
+			throw err
+		} 
+		next('success')
+	})
+}
+
+function editJoke(joke, del, next, file = false){
+	if (del) {
+		deleteJoke(joke.id, next, (file ? file : undefined));
+	} else {
+		getAllJokes((obj)=>{
+			const index = getJokeIndex(joke.id, obj);
+			obj.jokes[index].setup = joke.setup;
+			obj.jokes[index].punchline = joke.punchline;
+			save(obj, next, (file ? file : undefined));
+		}, (file ? file : undefined));
+	}
+}
+
+function deleteJoke(joke, next, file = false){
+	getAllJokes((obj)=>{
+		const index = getJokeIndex(joke, obj);
+		obj.jokes.splice(index, 1);
+		save(obj, next, (file ? file : undefined));
+	}, (file ? file : undefined));	
+}
+
 module.exports = {
-  getRandomIndex, getAllJokes, getSingleJoke, addNewJoke
+  getRandomIndex, getAllJokes, getSingleJoke, addNewJoke, editJoke
 }
 
 

@@ -184,6 +184,11 @@
       "setup": "I love telling dad jokes...",
       "punchline": "Sometimes he laughs",
       "id": 36
+    },
+    {
+      "setup": "When does a joke become a dad joke?",
+      "punchline": "When the punchline becomes apparent.",
+      "id": 37
     }
   ]
 }

@@ -43,10 +43,13 @@ em {
   display: none;
 }
 
-.form-control {
-  width: 500px;
+form {
+  width: 100%;
 }
 
+.form-control {
+  text-align: center;
+}
 
 /**************************************************
  * Header Styles

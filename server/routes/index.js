@@ -10,7 +10,7 @@
  const express  = require('express');
  const router   = express.Router();
 
- const fn = require('./functions');
+ const fn = require('../../functions');
  
 /*************************************************
  * ROUTES

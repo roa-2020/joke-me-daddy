@@ -2,11 +2,12 @@
   "name": "joke-me-daddy",
   "version": "1.0.0",
   "description": "A Dad Joke Randomiser",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "jest --watchAll --coverage",
     "start": "node index",
-    "dev": "nodemon index --ignore data.json"
+    "dev": "nodemon index --ignore data.json",
+    "knex":"knex --knexfile server/db/knexfile.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,10 @@
   "homepage": "https://github.com/roa-2020/joke-me-daddy#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.1.0"
+    "express-handlebars": "^5.1.0",
+    "knex": "^0.95.4",
+    "mysql": "^2.18.1",
+    "superagent": "^6.1.0"
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.3",

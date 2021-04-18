@@ -116,9 +116,14 @@
       "punchline": "Bob"
     },
     {
-      "id": 24,
+      "id": 23,
       "setup": "How did you quit smoking?",
       "punchline": "I decided to smoke only after sex."
+    },
+    {
+      "id": 24,
+      "setup": "What does a perverted frog say?",
+      "punchline": "Rubbit"
     },
     {
       "id": 25,

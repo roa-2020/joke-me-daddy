@@ -7,7 +7,10 @@
     "test": "jest --watchAll --coverage",
     "start": "node index",
     "dev": "nodemon index --ignore data.json",
-    "knex":"knex --knexfile server/db/knexfile.js"
+    "knex":"knex --knexfile server/db/knexfile.js",
+    "db:migrate": "knex --knexfile server/db/knexfile.js migrate:latest",
+    "db:seed": "knex --knexfile server/db/knexfile.js seed:run",
+    "db:rollback": "knex --knexfile server/db/knexfile.js migrate:rollback"
   },
   "repository": {
     "type": "git",

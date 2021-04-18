@@ -9,9 +9,14 @@
  // Define Requirements
 const express = require('express');
 const hbs     = require('express-handlebars');
-const routes = require('./routes');
+const index_routes = require('./routes');
+const joke_routes = require('./routes/jokes');
 const server = express();
-const fn = require('./functions');
+const fn = require('../functions');
+
+const api_verb = 'api'
+const api_version = 'v1'
+const api_base = '/' + api_verb + '/' + api_version
 
 // Middleware
 server.engine('hbs', hbs({
@@ -30,7 +35,8 @@ server.use(express.static('public'))
 server.use(express.urlencoded({extended: false}))
 
 // Routes
-server.use('/', routes)
+server.use('/', index_routes)
+server.use(api_base + '/jokes', joke_routes)
 
 // Export Server
 module.exports = server

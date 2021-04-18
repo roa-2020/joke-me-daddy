@@ -15,10 +15,6 @@
       <h2 class="my-4">Joke Not Saved</h2>
       <p>Sorry about that, something went wrong :&lpar;. No jokes for you today.</p>
     {{/ifEquals}}
-    {{#ifEquals save 'unauthorised'}}
-      <h2 class="my-4">Joke Not Saved</h2>
-      <p style="color: red;">You are not authorised to edit jokes!<br> Stop messing around and enjoy a joke.</p>
-    {{/ifEquals}}
   {{/if}}
   {{#unless save}}
     <h2 class="my-4">Add A Joke</h2>
